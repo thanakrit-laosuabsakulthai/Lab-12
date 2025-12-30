@@ -2,6 +2,9 @@
 
 using namespace std;
 
+template <typename extends_any>
+void mySwap(extends_any &a, extends_any &b);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -30,3 +33,9 @@ int main(){
 	return 0;
 }
 
+template <typename extends_any>
+void mySwap(extends_any &a, extends_any &b){
+	extends_any c = a;
+	a = b;
+	b = c;
+}
